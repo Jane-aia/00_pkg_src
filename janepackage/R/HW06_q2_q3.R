@@ -28,7 +28,7 @@ print(c)}
 #'
 trim_mean <- function(x,s,l){x_sort<-x[order(x)]
 if(length(x_sort)>=s+l+1){
-  x_trim <- x_sort[order(x_sort)>1 &order(x_sort) <= (length(x_sort)-2)]
+  x_trim <- x_sort[order(x_sort)>s &order(x_sort) <= (length(x_sort)-l)]
   mean(x_trim)}
 else if(length(x_sort)<s+l+1){
   stop("error for length of x ")
